@@ -30,7 +30,7 @@ SECRET_KEY = "6AMWFVESiY"
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    "8000-ajgreaves-blog-lesson-pl-lfv6kgfdws.us2.codeanyapp.com",
+    "8000-vladaalek-vladimirdjang-ge32fa0jxmp.ws-eu108.gitpod.io",
     ".herokuapp.com"
 ]
 
@@ -87,8 +87,13 @@ WSGI_APPLICATION = 'codestar.wsgi.application'
     #}
 #}
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("postgres://lzvztedx:Ab0UCcCmIUxFask6zSlZ4ndgyZu1VBux@flora.db.elephantsql.com/lzvztedx"))
+    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://8000-vladaalek-vladimirdjang-ge32fa0jxmp.ws-eu108.gitpod.io",
+    "https://coding-blog-django-vladimir-2181e6bc3857.herokuapp.com"
+]
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
