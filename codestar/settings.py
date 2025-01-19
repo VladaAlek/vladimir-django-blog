@@ -89,15 +89,13 @@ WSGI_APPLICATION = 'codestar.wsgi.application'
         #'NAME': BASE_DIR / 'db.sqlite3',
     #}
 #}
+
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 
 
-CSRF_TRUSTED_ORIGINS = [
-    "https://8000-vladaalek-vladimirdjang-ge32fa0jxmp.ws-eu108.gitpod.io",
-    "https://coding-blog-django-vladimir-2181e6bc3857.herokuapp.com"
-]
+CSRF_TRUSTED_ORIGINS = ["https://codestar-blog-vladimir-6eebeac7764a.herokuapp.com", "https://vladaalek-vladimirdjang-9g04usksa8k.ws-eu117.gitpod.io"]
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
