@@ -31,7 +31,7 @@ DEBUG = False
 # always check this
 
 ALLOWED_HOSTS = [
-    "8000-vladaalek-vladimirdjang-ge32fa0jxmp.ws-eu108.gitpod.io",
+    "8000-vladaalek-vladimirdjang-9g04usksa8k.ws-eu117.gitpod.io",
     ".herokuapp.com"
 ]
 
