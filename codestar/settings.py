@@ -32,7 +32,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     "8000-vladaalek-vladimirdjang-9g04usksa8k.ws-eu117.gitpod.io",
-    ".herokuapp.com"
+    "codestar-blog-vladimir-6eebeac7764a.herokuapp.com"
 ]
 
 
