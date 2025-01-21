@@ -41,7 +41,12 @@ def post_detail(request, slug):
         if comment_form.is_valid():
             comment = comment_form.save(commit=False)
             comment.author = request.user
-            comment.post = post
+            # setting the author field of the comment to the current request.user
+            """
+            we will then need to add the rest of the data that are required
+             by the Comment model, such as the author and post foreign key fields.
+            """
+            comment.post = post # see second line of this function
             comment.save()
             messages.add_message(
                 request, messages.SUCCESS,
@@ -49,7 +54,11 @@ def post_detail(request, slug):
     )
 
     comment_form = CommentForm()
-    print('hello')
+    """ blank instance of the CommentForm class. This line 
+    resets the content of the form to blank so that a user can write 
+    a second comment if they wish
+    """
+    print('about to render the template')
     return render(
         request,
         "blog/post_detail.html",
